@@ -13,12 +13,13 @@ import { bootstrapApplication } from '@angular/platform-browser';
       Learn more about Angular 
     </a>
     <div>{{myPublicName}}
+    test 
   `,
 })
 export class App {
   name = 'Angular';
-  private myName: string = "Dylan"
-  public myPublicName: string = "Dylan Public"
+  private myName: string = 'Dylan';
+  public myPublicName: string = 'Dylan Public';
 }
 
 bootstrapApplication(App);
