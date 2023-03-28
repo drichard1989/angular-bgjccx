@@ -20,6 +20,7 @@ export class App implements OnInit, AfterViewInit, AfterViewChecked {
   constructor(public dataService: DataService) {
     console.log('constructor implemented');
   }
+  nameTest = 'Katie'
   name = 'Angular';
   private myName: string = 'Dylan';
   public myPublicName: string = 'Dylan Public';
