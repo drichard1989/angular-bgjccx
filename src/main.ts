@@ -25,7 +25,6 @@ export class App implements OnInit, AfterViewInit, AfterViewChecked {
     //private variable used  -- received error that "property does not exist on type UtilityService"
     // console.log(this.utilityService.trayden);
   }
-  nameTest = 'Katie'
   name = 'Angular';
   private myName: string = 'Dylan';
   public myPublicName: string = 'Dylan Public';
