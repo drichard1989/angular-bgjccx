@@ -2,6 +2,25 @@
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-bgjccx)
 
+3/29/23
+
+Angular Animations Import and Implementation:
+
+- Let's knock this out so that we can debug it together. I am going to implement it and then add an example of an animation in the application. After that, look at their API and implement a different animation than I did. 
+
+- First, I made alot of changes to this app. The way it was started was extremely basic. Typically angular applications will have an 'App' Component and be built out from there, so to make this consistent with other applications, I re-structured it to have one. The main.ts logic has now been added to the app component. 
+
+- The app module is where I imported the Animations Module. I also implemented an example of an angular animations compnent called the open-close component. I have a link of the step by step that I did to accomplish this. 
+
+Animations How-To
+https://angular.io/guide/animations#getting-started
+
+Homework! 
+
+Create another component ( which you will have to manually add to the app-module as a declaration) and implement another angular animation on that component. You can see what I did with the open-close component and the link above will guide you through that example. 
+
+Side Note: This may seem overwhelming (as far as the angular animations go) but I have no idea how to use them really. I just used their example on their site, and we rarely animate anything with the angular animations module directly. So don't be overwhelmed. Just follow the instructions, and if you have questions, let me know. Godspeed!
+
 3/23/23
 
 Variables, Constructors and Services Implementation

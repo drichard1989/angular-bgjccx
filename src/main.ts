@@ -1,45 +1,15 @@
-import 'zone.js/dist/zone';
-import {
-  OnInit,
-  AfterViewInit,
-  AfterViewChecked,
-  Component,
-} from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { bootstrapApplication } from '@angular/platform-browser';
-import { DataService } from './data.service';
-import { UtilityService } from './utility.service';
 
-@Component({
-  selector: 'my-app',
-  standalone: true,
-  imports: [CommonModule],
-  providers: [DataService, UtilityService],
-  templateUrl: 'main.html',
-})
-export class App implements OnInit, AfterViewInit, AfterViewChecked {
-  constructor(public dataService: DataService, public utilityService: UtilityService) {
-    console.log('constructor implemented');
-    //public variable used
-    console.log(this.utilityService.Chloe)
-    //private variable used  -- received error that "property does not exist on type UtilityService"
-    // console.log(this.utilityService.trayden);
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
+  // Ensure Angular destroys itself on hot reloads.
+  if (window['ngRef']) {
+    window['ngRef'].destroy();
   }
-  name = 'Angular';
-  private myName: string = 'Dylan';
-  public myPublicName: string = 'Dylan Public';
+  window['ngRef'] = ref;
 
-  ngOnInit() {
-    console.log('ngOnInit implemented');
-  }
-
-  ngAfterViewInit() {
-    console.log('ngAfterViewInit implemented');
-  }
-
-  ngAfterViewChecked() {
-    console.log('ngAfterViewChecked implemented');
-  }
-}
-
-bootstrapApplication(App);
+  // Otherwise, log the boot error
+}).catch(err => console.error(err));
