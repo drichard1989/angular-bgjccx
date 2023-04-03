@@ -32,6 +32,8 @@ export class FadeInOutComponent implements OnInit {
 
 fadeInOut(): void {
     this.isShown = !this.isShown;
+    console.log(fadeIn)
+    console.log(fadeOut)
   }
 
   constructor() { }
